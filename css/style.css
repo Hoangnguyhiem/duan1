@@ -583,18 +583,22 @@ showtime */
     margin-top: 10px;
 }
 .container_showtime_childList{
+    cursor: pointer;
     margin: 15px 5px;
-    background: var(--bg-btn);
+    border: 1px solid #242424;
     padding: 10px;
     border-radius: 5px;
     font-size: var(--font-size16);
     font-weight: 600;
     color: var(--color-white);
 }
+.container_showtime_childList:hover{
+    background: var(--bg-btn);
+}
 .container_showtime_content{
     grid-template-columns: repeat(2,minmax(0,1fr));
     grid-template-rows: 315px 315px;
-    display: grid;
+    display: none;
     gap: 20px;
     margin: 20px;
 }

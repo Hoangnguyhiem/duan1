@@ -4,6 +4,8 @@ const tabTimeList = document.querySelectorAll(".container_product_headerTime--li
 const tabRoom = document.querySelectorAll(".container_product_contentsLists");
 const tabInfo = document.querySelectorAll(".container_info_topTab");
 const tabText = document.querySelectorAll(".container_info_text");
+const tabTimeShow = document.querySelectorAll(".container_showtime_childList");
+const tabShowFilm = document.querySelectorAll(".container_showtime_content");
 
 tabs.forEach((el) => el.addEventListener("click", function (e) {
     const tabId = e.target.dataset.tab;
@@ -30,16 +32,25 @@ tabTimeList.forEach((el) => el.addEventListener("click", function (e) {
 }));
 tabInfo.forEach((el) => el.addEventListener("click", function (e) {
     const tabInfoId = e.target.dataset.tab;
-    console.log(e.target.dataset.tab);
     tabInfo.forEach((el) => el.classList.remove("active"));
     el.classList.add("active");
     tabText.forEach((el) => {
         el.classList.remove("active");
         if (el.getAttribute("data-tab") === tabInfoId) {
             el.classList.add("active");
-
         };
-
+    });
+}));
+tabTimeShow.forEach((el) => el.addEventListener("click", function (e) {
+    const tabTimeShowId = e.target.dataset.tab;
+    console.log(tabTimeShowId);
+    tabTimeShow.forEach((el) => el.classList.remove("active"));
+    el.classList.add("active");
+    tabShowFilm.forEach((el) => {
+        el.classList.remove("active");
+        if (el.getAttribute("data-tab") === tabTimeShowId) {
+            el.classList.add("active");
+        };
     });
 }));
 function tims() {
@@ -50,9 +61,9 @@ function tims() {
 }
 const textTimeOne = document.querySelector(".container_product_contentsText--time");
 const container = document.querySelector(".container_product_contents");
-let countdownInterval; 
+let countdownInterval;
 tabTimeList.forEach((el) => el.addEventListener("click", function () {
-    container.style.display="block";
+    container.style.display = "block";
     if (!countdownInterval && textTimeOne.innerHTML !== "0") {
         let remainingTime = 600;
         function updateCountdown() {
@@ -63,9 +74,9 @@ tabTimeList.forEach((el) => el.addEventListener("click", function () {
             if (remainingTime > 0) {
                 remainingTime--;
             } else {
-                clearInterval(countdownInterval); 
-                alert("Time is up!"); 
-                countdownInterval = null; 
+                clearInterval(countdownInterval);
+                alert("Time is up!");
+                countdownInterval = null;
             }
         }
         countdownInterval = setInterval(updateCountdown, 1000);
