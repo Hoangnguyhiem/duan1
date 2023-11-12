@@ -37,7 +37,6 @@
     </div>
     <script src="js/slide.js"></script>
     <script src="js/productList.js"></script>
-    <script src="js/time.js"></script>
     <script src="js/tab.js"></script>
 </body>
 </html>

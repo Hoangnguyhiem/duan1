@@ -18,7 +18,22 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case "lichchieu":
             include "view/lichchieu.php";
-            break;           
+            break;
+        case "dangnhap":
+            include "view/login/dangnhap.php";
+            break;
+        case "dangky":
+            include "view/login/dangky.php";
+            break;
+        case "quenmatkhau":
+            include "view/login/quenmatkhau.php";
+            break;
+        case "doimatkhau":
+            include "view/login/doimatkhau.php";
+            break;
+        case "userinfo":
+            include "view/userinfo.php";
+            break;
     }
 } else {
     include "view/home.php";

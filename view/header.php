@@ -24,20 +24,21 @@
                             <li class="header_nav_menuList"><a href="index.php?act=gioithieu" class="header_nav_menuList--link">GIỚI THIỆU</a></li>
                         </ul>
                     </div>
-                    <!-- <div class="header_nav_btn">
-                        <button class="btn">ĐĂNG KÝ</button>
-                        <button class="btn btnColor">ĐĂNG NHẬP</button>
-                    </div> -->
-                    <div class="header_nav_user">
+
+                    <div class="header_nav_btn">
+                        <a href="index.php?act=dangky"><button class="btn">ĐĂNG KÝ</button></a>
+                       <a href="index.php?act=dangnhap"> <button class="btn btnColor">ĐĂNG NHẬP</button></a>
+                    </div>
+                    <!-- <div class="header_nav_user">
                         <i class="fa-solid fa-user header_nav_user--icon"></i>
                         <div class="header_nav_user--name">Lê Hoàng Anh</div>
                         <i class="fa-solid fa-caret-right fa-rotate-90 header_nav_userClose90"></i>
                         <div class="header_nav_user--bf">
-                            <div class="header_nav_user--bfInfo"><a href="" class="header_nav_user--bfInfoLink">Thông tin cá nhân</a></div>
+                            <div class="header_nav_user--bfInfo"><a href="index.php?act=userinfo" class="header_nav_user--bfInfoLink">Thông tin cá nhân</a></div>
                             <div class="header_nav_user--bfInfo"><a href="" class="header_nav_user--bfInfoLink">Đăng xuất</a></div>
                         </div>
-                    </div>
-
+                    </div> -->
+                    
                 </div>
             </div>
             <div class="slide">

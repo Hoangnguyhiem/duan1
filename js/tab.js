@@ -53,6 +53,24 @@ tabTimeShow.forEach((el) => el.addEventListener("click", function (e) {
         };
     });
 }));
+
+const storyInfoTab = document.querySelectorAll(".container_user_listInfo--story");
+const userTab = document.querySelectorAll(".container_user_Tab");
+
+storyInfoTab.forEach((el) => el.addEventListener("click", function (e) {
+    const storyInfoTabId = e.target.dataset.tab;
+    storyInfoTab.forEach((el) => el.classList.remove("active"));
+    el.classList.add("active");
+    userTab.forEach((el) => {
+        el.classList.remove("active");
+        if (el.getAttribute("data-tab") === storyInfoTabId) {
+            el.classList.add("active");
+        };
+    });
+}));
+
+
+
 function tims() {
     const textTimes = document.querySelector(".container_product_headerTime--list.active");
     const textTimeOne = document.querySelector(".container_product_contentsText--time");

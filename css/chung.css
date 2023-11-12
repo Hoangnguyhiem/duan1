@@ -29,9 +29,6 @@
 .btn:hover{
     background-color: var(--bg-nen);
 }
-.login{
-    display: none;
-}
 .container_product_header-date.active{
     background-color: #db2626;
     pointer-events: none;
@@ -60,4 +57,11 @@
 .container_showtime_childList.active{
     background: var(--bg-btn);
     pointer-events: none;
+}
+.container_user_listInfo--story.active{
+    background: var(--bg-btn);
+    pointer-events: none;
+}
+.container_user_Tab.active{
+    display: block;
 }
