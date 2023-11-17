@@ -212,8 +212,8 @@ body{
     width: calc(100% - 270px);
 }
 .container_bottom{
-    background-color: var(--bg-nen);
-    border: 2px solid var(--color-white);
+    background-color:  #0c1014;
+    border: 2px solid #292929;
     border-radius: 20px;
     width: 270px;
     height: 500px;

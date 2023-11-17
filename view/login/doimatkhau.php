@@ -32,6 +32,9 @@ if (isset($_SESSION['user']) && (is_array($_SESSION['user']))) {
                 <input type="hidden" name="matkhau" value="<?= $matkhau ?>">
                 <input type="hidden" name="mataikhoan" value="<?= $mataikhoan ?>">
                 <input class="login_cente_bottom--btn" type="submit" name="doiamatkhau" value="Xác nhận">
+                <?php if (isset($thongbao) && ($thongbao != "")) {
+                echo '<div class="login_center_topTextPhpErorr">' . $thongbao . '</div>';
+            } ?>
             </div>
         </form>
     </div>

@@ -59,8 +59,8 @@
             if (isset($thongbao) && ($thongbao != "")) {
                 echo '<div class="login_center_topTextPhp">' . $thongbao . '</div>';
             }
-            if (isset($thongbao) && ($thongbao != "")) {
-                echo '<div class="login_center_topTextPhpErorr">' . $thongbao . '</div>';
+            if (isset($thongbaoErorr) && ($thongbaoErorr != "")) {
+                echo '<div class="login_center_topTextPhpErorr">' . $thongbaoErorr . '</div>';
             }
             ?>
 

@@ -101,7 +101,7 @@
                     <div class="container_header_text">Phim Sắp chiếu</div>
                 </div>
                 <div class="container_content_product">
-                    <a href="chitietsanpham.html" class="container_content_product_item">
+                    <a href="index.php?act=chitietsanpham" class="container_content_product_item">
                         <div class="container_content_product_itemImg" style="background-image: url(img/15087893214581577-dRgYeBp48TwCU84d6BR7A3VwfUi.jpg);"></div>
                         <div class="container_content_product_itemText">
                             <p class="container_content_product_itemText1">Tâm lý</p>

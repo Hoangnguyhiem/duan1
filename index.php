@@ -23,6 +23,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "lichchieu":
             include "view/lichchieu.php";
             break;
+        case "chitietsanpham":
+            include "view/chitietsanpham.php";
+            break;
 
         case "dangnhap":
             if (isset($_POST['dangnhap']) && !empty($_POST['dangnhap'])) {
@@ -33,7 +36,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $_SESSION['user'] = $taikhoan;
                     Header('Location: index.php');
                 } else {
-                    $thongbao = "Sai tai khoan";
+                    $thongbao = "Thông tin tài khoản hoặc mât khẩu không chính xác!";
                 }
             }
             include "view/login/dangnhap.php";
@@ -51,7 +54,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     insert_taikhoan($ho, $ten, $tentaikhoan, $sodienthoai, $email, $matkhau);
                     $thongbao = 'Đăng ký thành công' . '<i class="fa-regular fa-circle-check icon"></i>';
                 } else {
-                    $thongbao = 'Vui lòng nhập lại mật khẩu' . '<i class="fa-solid fa-circle-exclamation icon"></i>';
+                    $thongbaoErorr = 'Vui lòng nhập lại mật khẩu' . '<i class="fa-solid fa-circle-exclamation icon"></i>';
                 }
             }
             include "view/login/dangky.php";
@@ -61,16 +64,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('location: index.php');
             break;
         case "quenmatkhau":
-            if(isset($_POST["datlaimk"])) {
+            if (isset($_POST["datlaimk"])) {
                 $email = $_POST['email'];
                 $laylaimk = laylaimk($email);
-                if( is_array($laylaimk)) {
-                    $thongbao = "Mật khẩu của bạn là:".$laylaimk['matkhau'];
-                }else{
+                if (is_array($laylaimk)) {
+                    $thongbao = "Mật khẩu của bạn là:" . $laylaimk['matkhau'];
+                } else {
                     $thongbao = "Gmail này không tồn tại";
-
                 }
-            };
+            }
+            ;
             include "view/login/quenmatkhau.php";
             break;
         case "doimatkhau":
@@ -80,10 +83,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $matkhauhientai = $_POST['matkhauhientai'];
                 $matkhaumoi = $_POST['matkhaumoi'];
                 $xacnhanmatkhaumoi = $_POST['xacnhanmatkhaumoi'];
-                if(($matkhau == $matkhauhientai) && ($matkhaumoi == $xacnhanmatkhaumoi)) {
-                    update_taikhoan($mataikhoan,$matkhauhientai, $matkhaumoi);
-                };
-            };
+                if (($matkhau == $matkhauhientai) && ($matkhaumoi == $xacnhanmatkhaumoi)) {
+                    update_taikhoan($mataikhoan, $matkhauhientai, $matkhaumoi);
+                } else {
+                    $thongbao = "Thông tin mật khẩu không hợp lệ";
+                }
+                ;
+            }
+            ;
             include "view/login/doimatkhau.php";
             break;
         case "userinfo":
@@ -94,9 +101,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $sodienthoai = $_POST['sodienthoai'];
                 $email = $_POST['email'];
                 echo $mataikhoan;
-                update_info($mataikhoan,$ho, $ten, $sodienthoai, $email);
+                update_info($mataikhoan, $ho, $ten, $sodienthoai, $email);
                 $_SESSION['user'] = dangnhap($tentaikhoan, $matkhau);
-            };
+            }
+            ;
             include "view/userinfo.php";
             break;
     }
