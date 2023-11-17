@@ -737,12 +737,12 @@ showtime */
     width: 100%;
     background: var(--bg-btn) ;
     height: 38px;
-    border: none;
     border-radius: 20px;
     margin-top: 20px;
     color: var(--color-white);
     font-weight: 500;
     font-size: var(--font-size16);
+    border: 1px solid #292929;
 }
 .login_cente_bottom--btn:hover{
     opacity: 0.8;
@@ -758,7 +758,7 @@ showtime */
 }
 .login_cente_bottom--notpass a{
     color: #db2626;
-    font-size: var(--font-size16);
+    font-size: var(--font-size14);
     cursor: pointer;
     text-decoration: none;
 }
@@ -873,13 +873,17 @@ showtime */
 }
 .container_pay_conten_bottom--btn{
     background: none;
-}
-.container_pay_conten_bottom--btn a{
-    text-decoration: none;
-    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size16);
 }
 .container_pay_conten_bottom--btn:hover{
     background-color: #242424;
+}
+.login_cente_bottomList--link{
+    text-decoration: none;
+
 }
 
 /* footer */
@@ -1028,6 +1032,7 @@ footer{
     justify-content: center;
 }
 .container_info_topTab{
+    cursor: pointer;
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #36383c;
@@ -1066,10 +1071,15 @@ footer{
 .login_cente_bottom--NameInputW2{
     width: 350px;
 }
+.login_cente_bottom--NameInputW2Email{
+    opacity: 0.5;
+    cursor: no-drop;
+}
 .container_user_Tab{
     display: none;
 }
 .container_user_listInfo--story{
+    cursor: pointer;
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #292929;
@@ -1093,4 +1103,8 @@ footer{
 .container_user_showList--storyTopText.font{
     width: 33.333%;
     font-weight: 400;
+}
+
+.login_center {
+    width: 580px;
 }

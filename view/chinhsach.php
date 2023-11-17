@@ -101,6 +101,3 @@
         trợ thêm.</p>
 </div>
 <!-- END CONTAINER -->
-<?php
-include "boxlogin.php";
-?>
